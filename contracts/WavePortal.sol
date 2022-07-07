@@ -24,7 +24,7 @@ contract WavePortal {
         console.log("%s has waved with message : !",msg.sender, _message);
         waves.push(Wave(msg.sender,_message,block.timestamp));
         emit NewWave(msg.sender,block.timestamp,_message);
-
+        console.log("");
         uint256 prizeAmount=0.0001 ether;
         require(
             prizeAmount <=address(this).balance, "Trying to withdraw more money than the contract has."
